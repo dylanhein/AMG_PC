@@ -1,0 +1,30 @@
+{
+  "name": "AMG_PC",
+  "version": "1.0.0",
+  "description": "Experimental Car PC Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanhein/AMG_PC.git"
+  },
+  "keywords": [],
+  "author": "Dylan Hein <dylanhein40@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanhein/AMG_PC/issues"
+  },
+  "homepage": "https://github.com/dylanhein/AMG_PC#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "johnny-five": "^0.11.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  }
+}
