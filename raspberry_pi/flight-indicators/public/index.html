@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en' dir="ltr">
+<head>
+  <meta charset='UTF-8' />
+  <title>Pressure!</title>
+  <style>body { font-family: sans-serif; }</style>
+  <!-- Flight Indicators library styles -->
+  <link rel="stylesheet" type="text/css" href="/bower_components/jquery-flight-indicators/css/flightindicators.css" />
+</head>
+<body bgcolor=#000000>
+  <div class="container">
+    <span id="altimeter"></span>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery-flight-indicators/js/jquery.flightindicators.min.js"></script>
+  
+  <script>
+    var socket = io.connect();
+    var altimeter = $.flightIndicator('#altimeter', 'altimeter');
+    
+    socket.on('pressure', function(res) {
+      altimeter.setPressure(res.pressure);
+      altimeter.setAltitude(res.altitude);
+    });
+  </script>
+
+</body>
+</html>
